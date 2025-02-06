@@ -13,13 +13,13 @@ engine = create_engine(DATABASE_URL)
 
 # Define transaction volume per day of the week (higher on Fri/Sat, lower on Mon)
 day_transaction_ranges = {
-    "Monday": (500, 600),    # Least transactions
-    "Tuesday": (600, 700),
-    "Wednesday": (700, 800),
-    "Thursday": (800, 900),
-    "Friday": (1100, 1300),  # Most transactions
-    "Saturday": (1100, 1300),  # Most transactions
-    "Sunday": (900, 1000)
+    "Monday": (400, 500),    # Least transactions
+    "Tuesday": (400, 500),
+    "Wednesday": (400, 500),
+    "Thursday": (600, 700),
+    "Friday": (900, 1000),  # Most transactions
+    "Saturday": (1000, 1000),  # Most transactions
+    "Sunday": (700, 800)
 }
 
 def generate_daily_transactions(date):
