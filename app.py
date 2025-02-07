@@ -25,7 +25,7 @@ def load_data():
         p.product_group, 
         TO_CHAR(f.transaction_date, 'YYYY-MM-DD') AS date, 
         EXTRACT(hour FROM f.transaction_date) AS trans_hour,
-        EXTRAXT('week' FROM f.transaction_date) AS week_num
+        EXTRACT('week' FROM f.transaction_date) AS week_num
     FROM fact_sales f 
     LEFT JOIN dim_products p ON f.product_id = p.product_id;
     """

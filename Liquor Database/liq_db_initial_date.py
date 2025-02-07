@@ -17,7 +17,8 @@ transaction_counts = {
     "2025-02-02": random.randint(650, 750),   # Max 850, range 750-850
     "2025-02-03": random.randint(450, 550),   # Max 700, range 650-750
     "2025-02-04": random.randint(550, 650),   # Max 700, range 650-750
-    "2025-02-05": random.randint(550, 650)    # Max 700, range 650-750
+    "2025-02-05": random.randint(550, 650),   # Max 700, range 650-750
+    "2025-02-06": random.randint(650, 750),   # Max 700, range 650-750    
 }
 
 def generate_daily_transactions(date, num_orders):
@@ -77,4 +78,4 @@ def generate_daily_transactions(date, num_orders):
 for date, num_orders in transaction_counts.items():
     generate_daily_transactions(date, num_orders)
 
-print("🎉 Transactions successfully inserted for 2/1 - 2/5 with varied counts!")
+print("🎉 Transactions successfully inserted for 2/1 - 2/6 with varied counts!")

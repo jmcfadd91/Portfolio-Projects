@@ -18,7 +18,7 @@ day_transaction_ranges = {
     "Wednesday": (400, 500),
     "Thursday": (600, 700),
     "Friday": (900, 1000),  # Most transactions
-    "Saturday": (1000, 1000),  # Most transactions
+    "Saturday": (900, 1000),  # Most transactions
     "Sunday": (700, 800)
 }
 
@@ -43,7 +43,7 @@ def generate_daily_transactions(date):
         for _ in range(num_orders):
             # Generate a random time within the day
             random_time = timedelta(
-                hours=random.randint(0, 23),
+                hours=random.randint(9, 22),
                 minutes=random.randint(0, 59),
                 seconds=random.randint(0, 59)
             )
