@@ -13,11 +13,11 @@ engine = create_engine(DATABASE_URL)
 
 # Define transaction distribution with variation
 transaction_counts = {
-    "2025-02-01": random.randint(900, 1000),  # Max 1000, random range 900-1000
-    "2025-02-02": random.randint(650, 750),   # Max 850, range 750-850
-    "2025-02-03": random.randint(450, 550),   # Max 700, range 650-750
-    "2025-02-04": random.randint(550, 650),   # Max 700, range 650-750
-    "2025-02-05": random.randint(550, 650)    # Max 700, range 650-750
+    "2024-02-01": random.randint(900, 1000),  # Max 1000, random range 900-1000
+    "2024-02-02": random.randint(750, 850),   # Max 850, range 750-850
+    "2024-02-03": random.randint(650, 750),   # Max 700, range 650-750
+    "2024-02-04": random.randint(650, 750),   # Max 700, range 650-750
+    "2024-02-05": random.randint(650, 750)    # Max 700, range 650-750
 }
 
 def generate_daily_transactions(date, num_orders):
@@ -34,7 +34,7 @@ def generate_daily_transactions(date, num_orders):
         for _ in range(num_orders):
             # Generate a random timestamp within the day
             random_time = timedelta(
-                hours=random.randint(9, 22),
+                hours=random.randint(0, 23),
                 minutes=random.randint(0, 59),
                 seconds=random.randint(0, 59)
             )
