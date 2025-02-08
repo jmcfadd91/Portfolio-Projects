@@ -96,7 +96,7 @@ with st.container():
             col7.plotly_chart(fig, use_container_width=True)
     else:
         col7.subheader("🏆 Top 10 Products")
-        top_products = filtered_df.groupby("product_name")["total_price"].sum().nlargest(10).sort_values(ascending=True).reset_index()
+        top_products = filtered_df.groupby("product_name")["total_price"].sum().nlargest(10).sort_values(ascending=False).reset_index()
         fig2 = px.bar(top_products, x="total_price", y="product_name", text_auto=True, orientation="h")
         col7.plotly_chart(fig2, use_container_width=True)
 
