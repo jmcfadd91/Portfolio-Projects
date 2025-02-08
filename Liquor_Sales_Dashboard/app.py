@@ -134,3 +134,7 @@ with st.container():
 # **Display Filtered Data Table**
 with st.expander("📊 Transactions"):
     st.dataframe(filtered_df.groupby(['trans_id'])[['total_price', 'sale_quantity']].sum().reset_index())
+
+if st.button("Refresh Data"):
+    load_data()
+    
