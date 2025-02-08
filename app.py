@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_dynamic_filters import DynamicFilters
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine
