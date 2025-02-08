@@ -87,7 +87,7 @@ with st.container():
         related_items = df[df["trans_id"].isin(transactions_with_selected) & (df["product_name"] != selected_product)]
 
         # Count most commonly co-purchased products
-        top_related_items = related_items["product_name"].value_counts().sort_values(ascending=False).reset_index()
+        top_related_items = related_items["product_name"].value_counts().sort_values(ascending=True).reset_index()
         top_related_items.columns = ["product_name", "count"]
 
         col7.subheader(f"🛒 Most Commonly Purchased with '{selected_product}'")
